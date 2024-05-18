@@ -5,11 +5,10 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-[ApiController]
 [Route("api/[controller]/[Action]")]
+[ApiController]
 public class CustomerController : ControllerBase
 {
-
     private IMediator _mediator;
 
     public CustomerController(IMediator mediator)

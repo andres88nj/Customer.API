@@ -11,7 +11,11 @@ public class AppDbContextSeed
         {
             context.Customers!.AddRange(GetPreconfiguredStreamer());
             await context.SaveChangesAsync();
+
             logger.LogInformation("New records created {context}", typeof(AppDbContextSeed).Name);
+
+            if(context.ChangeTracker.HasChanges())
+                await context.SaveChangesAsync();
         }
     }
 
