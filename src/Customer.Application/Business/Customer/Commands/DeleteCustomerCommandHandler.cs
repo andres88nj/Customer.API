@@ -28,7 +28,7 @@ public class DeleteCustomerCommandHandler : IRequestHandler<DeleteCustomerComman
         await _unitOfWork.CustomerRepository.DeleteAsync(deleteCustomer);
         await _unitOfWork.Complete();
 
-        _logger.LogInformation($"La operacion fue exitosa actualizando el streamer {request.Id}");
+        _logger.LogInformation($"Successful delete for: {request.Id}");
 
         return true;
     }

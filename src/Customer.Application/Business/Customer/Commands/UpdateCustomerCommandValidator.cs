@@ -8,9 +8,6 @@ public class UpdateCustomerCommandValidator : AbstractValidator<UpdateCustomerRe
 {
     public UpdateCustomerCommandValidator()
     {
-        //RuleFor(x => x.Id)
-            
-
         RuleFor(x => x.Name)
             .NotNull()
             .WithMessage(ValidationErrors.EUC001.Message)

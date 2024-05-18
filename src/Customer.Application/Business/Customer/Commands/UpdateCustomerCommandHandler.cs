@@ -25,7 +25,7 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
         await _unitOfWork.CustomerRepository.UpdateAsync(result);
         await _unitOfWork.Complete();
 
-        //_logger.LogInformation($"La operacion fue exitosa actualizando el streamer {request.CustomerRequest.Id}");
+        _logger.LogInformation($"Successful update for: {request.CustomerRequest.Id}");
 
         return true;
     }

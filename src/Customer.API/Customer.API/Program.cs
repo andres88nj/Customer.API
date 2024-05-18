@@ -2,7 +2,6 @@ using Customer.Application.Interfaces;
 using Customer.Domain.Validations.Customer;
 using Customer.Infrastructure;
 using Customer.Infrastructure.Repositories;
-using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,8 +32,6 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidation(fv =>
     fv.RegisterValidatorsFromAssemblyContaining<CreateCustomerCommandValidator>()
       .RegisterValidatorsFromAssemblyContaining<UpdateCustomerCommandValidator>());
-//builder.Services.AddValidatorsFromAssemblyContaining<CreateCustomerRequestValidator>();
-//builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
 
 //Seeder
 if (builder.Environment.IsDevelopment())

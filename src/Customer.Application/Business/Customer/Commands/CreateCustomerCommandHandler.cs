@@ -27,7 +27,8 @@ public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerComman
         await _unitOfWork.Complete();
 
         var result = _mapper.Map<GetCustomerResponse>(customer);
-        //_logger.LogInformation($"Streamer {customer.Id} fue creado existosamente");
+        
+        _logger.LogInformation($"Successful create");
 
         return result;
     }

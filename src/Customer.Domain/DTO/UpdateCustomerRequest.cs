@@ -2,7 +2,7 @@
 
 namespace Customer.Domain.DTO;
 
-public class UpdateCustomerRequest : BaseDomain
+public class UpdateCustomerRequest
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

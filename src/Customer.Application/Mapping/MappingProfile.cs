@@ -8,8 +8,14 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<CreateCustomerRequest, Customers>();
-        CreateMap<UpdateCustomerRequest, Customers>();
+        CreateMap<CreateCustomerRequest, Customers>()
+            .ForMember(dest => dest.CreatedBy, conf => conf.MapFrom(src => "admin"))
+            .ForMember(dest => dest.UpdatedBy, conf => conf.MapFrom(src => "admin"));
+        
+        CreateMap<UpdateCustomerRequest, Customers>()
+            .ForMember(dest => dest.CreatedBy, conf => conf.MapFrom(src => "admin"))
+            .ForMember(dest => dest.UpdatedBy, conf => conf.MapFrom(src => "admin"));
+        
         CreateMap<Customers, GetCustomerResponse>();
     }
 }

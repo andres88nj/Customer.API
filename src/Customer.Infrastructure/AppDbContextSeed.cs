@@ -23,7 +23,7 @@ public class AppDbContextSeed
     {
         return new List<Customers>
         {
-                new Customers {Name = "Jack Sparrow", DNI = "123456", Address = "Sea", Phone = "+15458", Mobile = "+15888", Email = "test@test.com", City = "Test", State = "TX" }
+                new Customers {Name = "Jack Sparrow", DNI = "123456", Address = "Sea", Phone = "+15458", Mobile = "+15888", Email = "test@test.com", City = "Test", State = "TX", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, CreatedBy = "Admin", UpdatedBy = "Admin" }
         };
 
     }

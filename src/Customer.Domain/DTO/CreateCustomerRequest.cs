@@ -2,7 +2,7 @@
 
 namespace Customer.Domain.DTO;
 
-public class CreateCustomerRequest : BaseDomain
+public class CreateCustomerRequest
 {
     public string Name { get; set; }
     public string DNI { get; set; }
