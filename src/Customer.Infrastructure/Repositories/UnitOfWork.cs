@@ -10,8 +10,13 @@ public class UnitOfWork : IUnitOfWork
     private readonly AppDbContext _context;
 
     private ICustomerRepository _customerRepository;
+    private ICityRepository _cityRepository;
+    private IStateRepository _stateRepository;
 
     public ICustomerRepository CustomerRepository => _customerRepository ??= new CustomerRepository(_context);
+    public ICityRepository CityRepository => _cityRepository ??= new CityRepository(_context);
+    public IStateRepository StateRepository => _stateRepository ??= new StateRepository(_context);
+
 
     public UnitOfWork(AppDbContext context)
     {

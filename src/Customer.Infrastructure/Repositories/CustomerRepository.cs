@@ -1,5 +1,4 @@
 ﻿using Customer.Application.Interfaces;
-using Customer.Domain.DTO;
 
 namespace Customer.Infrastructure.Repositories;
 

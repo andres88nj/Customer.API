@@ -4,7 +4,12 @@ namespace Customer.Domain.Models;
 
 public class City : BaseDomain
 {
-    Guid Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
-    public State StateId { get; set; }
+
+    public Guid StateId { get; set; }
+    public State State { get; set; }
+
+    //public Guid CustomerId { get; set; }
+    public Customer Customer { get; set; }
 }
