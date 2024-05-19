@@ -11,9 +11,6 @@ public class Customer : BaseDomain
     public string Phone { get; set; }
     public string Mobile { get; set; }
     public string Email { get; set; }
-    //public string City { get; set; }
-    //public string State { get; set; }
-
-    public Guid CityId { get; set; }
-    public City City { get; set; }
+    public string City { get; set; }
+    public string State { get; set; }
 }

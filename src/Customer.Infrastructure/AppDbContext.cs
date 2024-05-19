@@ -1,6 +1,4 @@
-﻿using Customer.Domain.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using Customers = Customer.Domain.Models.Customer;
 
 namespace Customer.Infrastructure;
@@ -8,8 +6,6 @@ namespace Customer.Infrastructure;
 public class AppDbContext : DbContext
 {
     public DbSet<Customers> Customers { get; set; }
-    public DbSet<City> Cities { get; set; }
-    public DbSet<State> States { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -19,19 +15,6 @@ public class AppDbContext : DbContext
 
         builder.Entity<Customers>()
             .HasKey(x => x.Id);
-
-        builder.Entity<State>()
-            .HasMany(e => e.Cities)
-            .WithOne(e => e.State)
-            .HasForeignKey(e => e.StateId)
-            .HasPrincipalKey(e => e.Id);
-
-        builder.Entity<City>()
-            //.HasKey(x => x.Id);
-            .HasOne(e => e.Customer)
-            .WithOne(e => e.City)
-            .HasForeignKey<Customers>(e => e.CityId)
-            .IsRequired();
     }
 }
 

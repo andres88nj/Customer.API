@@ -1,5 +1,4 @@
-﻿using Customer.Domain.Models;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Customers = Customer.Domain.Models.Customer;
 
 namespace Customer.Infrastructure;
@@ -22,13 +21,9 @@ public class AppDbContextSeed
 
     private static IEnumerable<Customers> GetPreconfiguredStreamer()
     {
-        var state = new State() { Id = Guid.NewGuid(), Name = "Florida", ZipCode = "FL", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now };
-
-        var city = new City() { Id = Guid.NewGuid(), Name = "Miami", State = state, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now };
-        
         return new List<Customers>
         {
-            new Customers {Name = "Jack Sparrow", DNI = "123456", Address = "Sea", Phone = "+15458", Mobile = "+15888", Email = "test@test.com", City = city, CityId = city.Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, CreatedBy = "Admin", UpdatedBy = "Admin" }
+            new Customers {Name = "Jack Sparrow", DNI = "123456", Address = "Sea", Phone = "+15458", Mobile = "+15888", Email = "test@test.com", City = "city", State = "state", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, CreatedBy = "Admin", UpdatedBy = "Admin" }
         };
 
     }

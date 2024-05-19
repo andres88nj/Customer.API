@@ -9,6 +9,4 @@ public interface IUnitOfWork : IDisposable
     Task<int> Complete();
 
     ICustomerRepository CustomerRepository { get; }
-    ICityRepository CityRepository { get; }
-    IStateRepository StateRepository { get; }
 }
