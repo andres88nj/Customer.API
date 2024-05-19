@@ -64,8 +64,6 @@ public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerRe
             .NotNull()
             .WithMessage(ValidationErrors.ECC007.Message)
             .NotEmpty()
-            .WithMessage(ValidationErrors.ECC007.Message)
-            .MaximumLength(20)
             .WithMessage(ValidationErrors.ECC007.Message);
     } 
 }

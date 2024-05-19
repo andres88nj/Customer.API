@@ -20,6 +20,14 @@ public class ListCustomersQueryHandler : IRequestHandler<ListCustomersQuery, IEn
     {
         var customers = await _unitOfWork.CustomerRepository.GetAllAsync();
 
+        foreach (var customer in customers) 
+        {
+            var city = await _unitOfWork.CityRepository.GetByIdAsync(customer.CityId);
+            var state = await _unitOfWork.StateRepository.GetByIdAsync(city.StateId);
+            city.State = state;
+            customer.City = city;  
+        }
+        
         return _mapper.Map<IEnumerable<GetCustomerResponse>>(customers);
     }
 }

@@ -64,8 +64,6 @@ public class UpdateCustomerCommandValidator : AbstractValidator<UpdateCustomerRe
             .NotNull()
             .WithMessage(ValidationErrors.EUC007.Message)
             .NotEmpty()
-            .WithMessage(ValidationErrors.EUC007.Message)
-            .MaximumLength(20)
             .WithMessage(ValidationErrors.EUC007.Message);
     } 
 }

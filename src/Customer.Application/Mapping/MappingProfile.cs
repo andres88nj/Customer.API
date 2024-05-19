@@ -15,7 +15,9 @@ public class MappingProfile : Profile
         CreateMap<UpdateCustomerRequest, Customers>()
             .ForMember(dest => dest.CreatedBy, conf => conf.MapFrom(src => "admin"))
             .ForMember(dest => dest.UpdatedBy, conf => conf.MapFrom(src => "admin"));
-        
-        CreateMap<Customers, GetCustomerResponse>();
+
+        CreateMap<Customers, GetCustomerResponse>()
+            .ForMember(dest => dest.City, conf => conf.MapFrom(src => src.City.Name))
+            .ForMember(dest => dest.State, conf => conf.MapFrom(src => src.City.State.Name));
     }
 }

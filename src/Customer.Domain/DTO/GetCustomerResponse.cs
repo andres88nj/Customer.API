@@ -1,4 +1,5 @@
-﻿using Customer.Domain.Models.Common;
+﻿using Customer.Domain.Models;
+using Customer.Domain.Models.Common;
 
 namespace Customer.Domain.DTO;
 
