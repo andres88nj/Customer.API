@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D155620D-4D6E-4552-BC55-A33DB7889E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.API.UnitTests", "Customer.API.UnitTests\Customer.API.UnitTests.csproj", "{D27139DA-D14D-4895-A350-5FEA76372472}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.API.UnitTests", "..\Customer.API.UnitTests\Customer.API.UnitTests.csproj", "{D27139DA-D14D-4895-A350-5FEA76372472}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
