@@ -25,10 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Validations\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Customer.Infrastructure\Customer.Infrastructure.csproj" />
   </ItemGroup>
 
