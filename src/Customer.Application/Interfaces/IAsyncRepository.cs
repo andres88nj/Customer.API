@@ -2,7 +2,7 @@
 
 namespace Customer.Application.Interfaces;
 
-public interface IAsyncRepository<T> where T : BaseDomain
+public interface IAsyncRepository<T> where T : AuditableEntity
 {
     Task<IReadOnlyList<T>> GetAllAsync();
 

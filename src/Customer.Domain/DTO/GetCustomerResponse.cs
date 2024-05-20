@@ -2,7 +2,7 @@
 
 namespace Customer.Domain.DTO;
 
-public class GetCustomerResponse : BaseDomain
+public class GetCustomerResponse : AuditableEntity
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

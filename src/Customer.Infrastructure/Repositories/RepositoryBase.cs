@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Customer.Infrastructure.Repositories;
 
-public class RepositoryBase<T> : IAsyncRepository<T> where T : BaseDomain
+public class RepositoryBase<T> : IAsyncRepository<T> where T : AuditableEntity
 {
     protected readonly AppDbContext _context;
 

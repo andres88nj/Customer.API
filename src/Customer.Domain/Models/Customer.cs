@@ -2,7 +2,7 @@
 
 namespace Customer.Domain.Models;
 
-public class Customer : BaseDomain
+public class Customer : AuditableEntity
 {
     public Guid Id { get; set; }
     public string Name { get;  set; }

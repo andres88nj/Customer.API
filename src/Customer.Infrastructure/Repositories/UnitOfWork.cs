@@ -30,7 +30,7 @@ public class UnitOfWork : IUnitOfWork
         _context.Dispose();
     }
 
-    public IAsyncRepository<TEntity> Repository<TEntity>() where TEntity : BaseDomain
+    public IAsyncRepository<TEntity> Repository<TEntity>() where TEntity : AuditableEntity
     {
         if (_repositories == null)
             _repositories = new Hashtable();

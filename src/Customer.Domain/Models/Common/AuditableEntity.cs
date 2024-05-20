@@ -1,6 +1,6 @@
 ﻿namespace Customer.Domain.Models.Common;
 
-public class BaseDomain
+public class AuditableEntity
 {
     private string? _updatedBy;
 
